@@ -1,0 +1,49 @@
+﻿<Window x:Class="AtletikaGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Atletika" Height="450" Width="800">
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="eredmenyTabla"
+                  Grid.Column="0"
+                  AutoGenerateColumns="True"
+                  SelectionMode="Single"
+                  SelectedIndex="0"
+                  Margin="0,0,20,0"/>
+
+        <!-- Jobb oldali vezérlők -->
+        <StackPanel Grid.Column="1">
+
+            <Button x:Name="helyezesButton"
+                    Content="Helyezés"
+                    Click="helyezesButton_Click"
+                    Margin="0,0,0,10"
+                    Height="35"/>
+
+            <Label x:Name="helyezesLabel"
+                   Content="Helyezés: "
+                   FontSize="18"
+                   Margin="0,0,0,30"/>
+
+            <Button x:Name="csucsButton"
+                    Content="Egyéni csúcsok"
+                    Click="csucsButton_Click"
+                    Margin="0,0,0,10"
+                    Height="35"/>
+
+            <Label x:Name="csucsLabel"
+                   Content="Egyéni csúcsok: "
+                   FontSize="18"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
